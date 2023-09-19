@@ -1,4 +1,4 @@
-package ru.smiling_devilll.hw03.testing.framework.annotations;
+package ru.smiling.devilll.hw03.testing.framework.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
