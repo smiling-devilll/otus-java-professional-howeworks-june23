@@ -1,8 +1,8 @@
-package ru.smiling_devilll.hw03.testing.framework;
+package ru.smiling.devilll.hw03.testing.framework;
 
-import ru.smiling_devilll.hw03.testing.framework.annotations.AfterEach;
-import ru.smiling_devilll.hw03.testing.framework.annotations.BeforeEach;
-import ru.smiling_devilll.hw03.testing.framework.annotations.Test;
+import ru.smiling.devilll.hw03.testing.framework.annotations.AfterEach;
+import ru.smiling.devilll.hw03.testing.framework.annotations.BeforeEach;
+import ru.smiling.devilll.hw03.testing.framework.annotations.Test;
 
 @SuppressWarnings("all")
 public class TestClass {

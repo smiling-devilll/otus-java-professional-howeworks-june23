@@ -1,4 +1,4 @@
-package ru.smiling_devilll.hw03.testing.framework;
+package ru.smiling.devilll.hw03.testing.framework;
 
 import java.lang.reflect.InvocationTargetException;
 
