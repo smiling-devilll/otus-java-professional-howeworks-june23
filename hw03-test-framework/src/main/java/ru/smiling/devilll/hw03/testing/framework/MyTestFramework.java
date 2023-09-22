@@ -20,8 +20,8 @@ public class MyTestFramework {
         int succeedTests = 0;
         int failedTests = 0;
 
-        Method[] beforeEachMethods = findBeforeEach(className);
-        Method[] afterEachMethods = findAfterEach(className);
+        Method[] beforeEachMethods = findAnnotation(className, BeforeEach.class);
+        Method[] afterEachMethods = findAnnotation(className, AfterEach.class);
 
         for (Method method : className.getDeclaredMethods()) {
             if (hasAnnotation(method, Test.class)) {
@@ -47,17 +47,12 @@ public class MyTestFramework {
         }
     }
 
-    private <T> Method[] findBeforeEach(Class<T> className) {
+    private <T> Method[] findAnnotation(Class<T> className, Class<? extends Annotation> annotation) {
         return Arrays.stream(className.getDeclaredMethods())
-                .filter(m -> hasAnnotation(m, BeforeEach.class))
+                .filter(m -> hasAnnotation(m, annotation))
                 .toArray(Method[]::new);
     }
 
-    private <T> Method[] findAfterEach(Class<T> className) {
-        return Arrays.stream(className.getDeclaredMethods())
-                .filter(m -> hasAnnotation(m, AfterEach.class))
-                .toArray(Method[]::new);
-    }
     private boolean hasAnnotation(Method method, Class<? extends Annotation> clazz) {
         return method.isAnnotationPresent(clazz);
     }
