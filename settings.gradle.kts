@@ -3,6 +3,7 @@ rootProject.name = "otus-java-professional-howeworks-june23"
 include("hw01-gradle")
 include("hw02-generics")
 include("hw03-test-framework")
+include("hw05-aop")
 
 pluginManagement {
 
