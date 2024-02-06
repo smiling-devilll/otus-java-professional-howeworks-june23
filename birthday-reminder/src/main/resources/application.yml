@@ -1,0 +1,17 @@
+telegram:
+  token: ${TELEGRAM_BOT_TOKEN}
+  botName: ${TELEGRAM_BOT_CHAT_ID}
+  creatorId: ${CREATOR_ID}
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:15432/demoDB
+    driverClassName: org.postgresql.Driver
+    username: usr
+    password: pwd
+  jpa:
+   database-platform: org.hibernate.dialect.PostgreSQLDialect
+   show-sql: true
+logging:
+  level:
+    ru.smiling.devilll: DEBUG
