@@ -6,8 +6,11 @@ import org.telegram.abilitybots.api.sender.MessageSender;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import ru.smiling.devilll.birthday.reminder.api.telegram.model.ChatState;
+import ru.smiling.devilll.birthday.reminder.api.telegram.model.KeyboardFactory;
+import ru.smiling.devilll.birthday.reminder.api.telegram.model.TgButton;
 import ru.smiling.devilll.birthday.reminder.domain.BirthdayService;
-import ru.smiling.devilll.birthday.reminder.domain.ReminderService;
+import ru.smiling.devilll.birthday.reminder.domain.reminder.ReminderService;
 import ru.smiling.devilll.birthday.reminder.domain.UserService;
 import ru.smiling.devilll.birthday.reminder.model.RemindPeriod;
 import ru.smiling.devilll.birthday.reminder.model.SourceSystem;
@@ -15,8 +18,10 @@ import ru.smiling.devilll.birthday.reminder.model.SourceSystem;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.ConcurrentHashMap;
 
 
+//todo use separate command handlers
 public class ResponseProcessor {
 
     private final Logger logger = LoggerFactory.getLogger(ResponseProcessor.class);
@@ -26,14 +31,14 @@ public class ResponseProcessor {
     private final MessageSender sender;
 
 
-    private Map<Long, ChatState> states;
+    private final Map<Long, ChatState> states;
 
     public ResponseProcessor(BirthdayService birthdayService, UserService userService, ReminderService reminderService, MessageSender sender) {
         this.birthdayService = birthdayService;
         this.userService = userService;
         this.reminderService = reminderService;
         this.sender = sender;
-        this.states = new HashMap<>();
+        this.states = new ConcurrentHashMap<>();
     }
 
     public void processStart(long chatId, String userName) {

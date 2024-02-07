@@ -1,10 +1,9 @@
-package ru.smiling.devilll.birthday.reminder.api.telegram;
+package ru.smiling.devilll.birthday.reminder.api.telegram.model;
 
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboard;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
-import ru.smiling.devilll.birthday.reminder.domain.ReminderService;
 import ru.smiling.devilll.birthday.reminder.model.RemindPeriod;
 
 import java.util.ArrayList;

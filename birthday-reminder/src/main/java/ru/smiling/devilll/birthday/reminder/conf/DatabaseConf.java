@@ -15,16 +15,8 @@ public class DatabaseConf {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
         sessionFactory.setPackagesToScan("ru.smiling.devilll.birthday.reminder.domain.dao" );
-//        sessionFactory.setHibernateProperties(hibernateProperties());
 
         return sessionFactory;
     }
 
-//    @Bean
-//    public PlatformTransactionManager hibernateTransactionManager() {
-//        HibernateTransactionManager transactionManager
-//                = new HibernateTransactionManager();
-//        transactionManager.setSessionFactory(sessionFactory().getObject());
-//        return transactionManager;
-//    }
 }

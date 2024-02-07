@@ -52,7 +52,7 @@ dependencies {
                 mavenBom(BOM_COORDINATES)
             }
             annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
-            implementation("org.springframework.boot:spring-boot-starter-web")
+            implementation("org.springframework.boot:spring-boot-starter-validation")
             implementation("org.springframework:spring-orm")
             implementation("com.google.guava:guava:$guava")
 

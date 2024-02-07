@@ -9,7 +9,6 @@ import ru.smiling.devilll.birthday.reminder.model.SourceSystem;
 import ru.smiling.devilll.birthday.reminder.model.User;
 
 @Repository
-@Transactional
 public class UserDaoImpl implements UserDao {
 
     private final SessionFactory sessionFactory;

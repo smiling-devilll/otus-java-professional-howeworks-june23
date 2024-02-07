@@ -1,11 +1,10 @@
-package ru.smiling.devilll.birthday.reminder.domain;
+package ru.smiling.devilll.birthday.reminder.domain.reminder;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import ru.smiling.devilll.birthday.reminder.domain.dao.UserDao;
 import ru.smiling.devilll.birthday.reminder.model.RemindPeriod;
 import ru.smiling.devilll.birthday.reminder.model.Settings;
-import ru.smiling.devilll.birthday.reminder.model.UserSettings;
 
 import java.time.LocalTime;
 

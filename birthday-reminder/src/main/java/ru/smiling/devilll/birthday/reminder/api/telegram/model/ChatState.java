@@ -1,4 +1,4 @@
-package ru.smiling.devilll.birthday.reminder.api.telegram;
+package ru.smiling.devilll.birthday.reminder.api.telegram.model;
 
 public enum ChatState {
     AWAITING_PERSON_NAME_TO_FIND,

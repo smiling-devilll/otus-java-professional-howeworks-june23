@@ -1,4 +1,4 @@
-package ru.smiling.devilll.birthday.reminder.domain;
+package ru.smiling.devilll.birthday.reminder.domain.reminder;
 
 import org.springframework.stereotype.Service;
 import ru.smiling.devilll.birthday.reminder.model.Person;

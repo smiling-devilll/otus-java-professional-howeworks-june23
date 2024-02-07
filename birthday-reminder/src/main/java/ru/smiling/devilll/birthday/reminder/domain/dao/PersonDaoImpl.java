@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
 public class PersonDaoImpl implements PersonDao {
     private final SessionFactory sessionFactory;
 
-    @Autowired
     public PersonDaoImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }

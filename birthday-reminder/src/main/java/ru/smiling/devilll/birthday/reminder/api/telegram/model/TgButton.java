@@ -1,4 +1,4 @@
-package ru.smiling.devilll.birthday.reminder.api.telegram;
+package ru.smiling.devilll.birthday.reminder.api.telegram.model;
 
 import java.util.Arrays;
 import java.util.Optional;

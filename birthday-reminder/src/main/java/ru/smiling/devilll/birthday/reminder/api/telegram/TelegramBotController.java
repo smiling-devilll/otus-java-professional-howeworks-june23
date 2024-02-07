@@ -10,7 +10,7 @@ import org.telegram.abilitybots.api.objects.*;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.smiling.devilll.birthday.reminder.conf.TelegramBotConf;
 import ru.smiling.devilll.birthday.reminder.domain.BirthdayService;
-import ru.smiling.devilll.birthday.reminder.domain.ReminderService;
+import ru.smiling.devilll.birthday.reminder.domain.reminder.ReminderService;
 import ru.smiling.devilll.birthday.reminder.domain.UserService;
 
 import java.util.function.BiConsumer;
